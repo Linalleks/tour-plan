@@ -8,6 +8,11 @@ body {
   color: #333333;
 }
 
+input,
+button {
+  outline: none;
+}
+
 .container {
   max-width: 1110px;
   margin: auto;
@@ -402,6 +407,7 @@ template {
 }
 
 .search__button {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
