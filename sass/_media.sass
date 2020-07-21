@@ -38,6 +38,7 @@
       flex-direction: row
   .booking
     width: 340px
+    padding: 28px 23px
   .slider
     width: 100%
   .map
@@ -108,7 +109,22 @@
     &-info
       &__description
         max-width: 280px
+
 @media ( max-width: 350px )
   .slider
     height: 179px
+    &-button
+      width: 12px
+      height: 12px
+      background-size: 4px
+      &--next
+        right: 7px
+      &--prev
+        left: 7px
+  .map
+    height: 173px
+  .hotel
+    &-right
+      flex-direction: column
+      min-height: 408px
 
