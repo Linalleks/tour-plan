@@ -13,3 +13,23 @@ var mySwiper = new Swiper(".swiper-container", {
     onlyInViewport: false,
   },
 });
+
+ymaps.ready(init);
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [7.890461, 98.294484],
+    zoom: 17,
+  });
+
+  myPlacemark = new ymaps.Placemark(
+    [7.890808, 98.294949],
+    {
+      iconCaption: "Hilton hotel",
+    },
+    {
+      preset: "islands#greenDotIconWithCaption",
+    }
+  );
+
+  myMap.geoObjects.add(myPlacemark);
+}
