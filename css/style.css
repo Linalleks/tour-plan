@@ -1053,6 +1053,9 @@ template {
   .map {
     width: 100%;
   }
+  .newsletter {
+    padding: 76px 0 83px 0;
+  }
   .newsletter-wrapper {
     max-width: 576px;
     width: 92%;
@@ -1063,6 +1066,9 @@ template {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .newsletter__title {
+    margin-bottom: 37px;
   }
 }
 
@@ -1078,15 +1084,6 @@ template {
   }
   .hotel__slider {
     margin-bottom: 20px;
-  }
-  .newsletter {
-    padding: 76px 0 83px 0;
-  }
-  .newsletter__title {
-    margin-bottom: 37px;
-  }
-  .subscribe {
-    width: 100%;
   }
 }
 
@@ -1104,6 +1101,9 @@ template {
   .newsletter-title__strong {
     font-size: 30px;
     line-height: 38px;
+  }
+  .subscribe {
+    width: 100%;
   }
   .subscribe__input {
     padding-left: 20px;
