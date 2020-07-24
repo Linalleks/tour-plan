@@ -933,7 +933,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin: 45px auto 0;
   background-color: #ffffff;
   border-radius: 8px;
@@ -1053,10 +1053,10 @@ template {
   .container {
     max-width: 960px;
   }
-  .slider {
+  .hotel-slider {
     width: 590px;
   }
-  .swiper-slide__image {
+  .hotel-slider__image {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
@@ -1096,6 +1096,9 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .hotel-slider {
+    width: 100%;
+  }
   .hotel__slider {
     margin-bottom: 30px;
   }
@@ -1109,11 +1112,11 @@ template {
     width: 340px;
     padding: 28px 23px;
   }
-  .slider {
-    width: 100%;
-  }
   .map {
     width: 340px;
+  }
+  .reviews-slider__item {
+    max-width: 580px;
   }
 }
 
@@ -1180,7 +1183,7 @@ template {
             order: -1;
     margin-left: 0;
   }
-  .slider {
+  .hotel-slider {
     height: 350px;
   }
   .hotel-right {
@@ -1213,17 +1216,38 @@ template {
   .newsletter__title {
     margin-bottom: 37px;
   }
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item:after, .reviews-slider__item:before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 32px;
+  }
+  .reviews-slider__button--prev {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-left: -65px;
+  }
+  .reviews-slider__button--next {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    margin-right: -65px;
+  }
 }
 
 @media (max-width: 576px) {
   .logo {
     width: 99px;
   }
-  .slider {
-    height: 300px;
-  }
   .hotel {
     padding-top: 0;
+  }
+  .hotel-slider {
+    height: 300px;
   }
   .hotel__slider {
     margin-bottom: 20px;
@@ -1231,7 +1255,7 @@ template {
 }
 
 @media (max-width: 425px) {
-  .slider {
+  .hotel-slider {
     height: 250px;
   }
   .hotel-info__description {
@@ -1254,22 +1278,22 @@ template {
 }
 
 @media (max-width: 350px) {
-  .slider {
+  .map {
+    height: 173px;
+  }
+  .hotel-slider {
     height: 179px;
   }
-  .slider-button {
+  .hotel-slider__button {
     width: 12px;
     height: 12px;
     background-size: 4px;
   }
-  .slider-button--next {
+  .hotel-slider__button--next {
     right: 7px;
   }
-  .slider-button--prev {
+  .hotel-slider__button--prev {
     left: 7px;
-  }
-  .map {
-    height: 173px;
   }
   .hotel-right {
     -webkit-box-orient: vertical;
