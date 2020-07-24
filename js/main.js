@@ -21,6 +21,8 @@ function init() {
     zoom: 17,
   });
 
+  myMap.behaviors.disable("scrollZoom");
+
   myPlacemark = new ymaps.Placemark(
     [7.890808, 98.294949],
     {
