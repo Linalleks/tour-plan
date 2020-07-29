@@ -1503,7 +1503,7 @@ template {
     grid-column: span 2;
   }
   .footer__contact-details {
-    grid-column: span 5;
+    grid-column: span 6;
     -ms-grid-row: 3;
     grid-row: 3;
   }
@@ -1609,7 +1609,6 @@ template {
     margin-top: 10px;
   }
   .search__input {
-    min-width: 245px;
     width: 100%;
   }
   .stars {
@@ -1800,6 +1799,12 @@ template {
   }
   .footer__bottom-links {
     margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 515px) {
+  .footer__item--mb-2:nth-child(2) {
+    width: 268px;
   }
 }
 

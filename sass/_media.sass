@@ -91,7 +91,7 @@
       grid-column: span 2
     &__contact
       &-details
-        grid-column: span 5
+        grid-column: span 6
         grid-row: 3
       &-form
         grid-column: span 5
@@ -283,6 +283,12 @@
       align-items: flex-start
       &-links
         margin-bottom: 10px
+@media ( max-width: 515px )
+  .footer
+    &__item
+      &--mb-2
+        &:nth-child(2)
+          width: 268px
 @media ( max-width: 425px )
   .hotel
     &-slider
