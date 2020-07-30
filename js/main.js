@@ -1,9 +1,16 @@
 var menuButton = document.querySelector(".menu-button");
-menuButton.addEventListener("click", function () {
+let menuLink = document.querySelectorAll(".navbar-menu__link");
+
+function toggleMenu() {
   document
     .querySelector(".navbar-bottom")
     .classList.toggle("navbar-bottom--visible");
-});
+}
+
+menuButton.addEventListener("click", toggleMenu);
+for (let i = 0; i < menuLink.length; i++) {
+  menuLink[i].onclick = toggleMenu;
+}
 
 var hotelSlider = new Swiper(".hotel-slider", {
   // Optional parameters

@@ -1822,9 +1822,9 @@ template {
   }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 525px) {
   .footer__item--mb-2:nth-child(2) {
-    width: 268px;
+    width: 273px;
   }
 }
 
