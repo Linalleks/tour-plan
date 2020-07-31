@@ -1,15 +1,23 @@
 var menuButton = document.querySelector(".menu-button");
-let menuLink = document.querySelectorAll(".navbar-menu__link");
-
-function toggleMenu() {
+menuButton.addEventListener("click", function () {
   document
     .querySelector(".navbar-bottom")
     .classList.toggle("navbar-bottom--visible");
-}
+});
 
-menuButton.addEventListener("click", toggleMenu);
+let menuLink = document.querySelectorAll(".navbar-menu__link");
 for (let i = 0; i < menuLink.length; i++) {
-  menuLink[i].onclick = toggleMenu;
+  menuLink[i].addEventListener("click", function () {
+    if (
+      document
+        .querySelector(".navbar-bottom")
+        .classList.contains("navbar-bottom--visible")
+    ) {
+      document
+        .querySelector(".navbar-bottom")
+        .classList.remove("navbar-bottom--visible");
+    }
+  });
 }
 
 var hotelSlider = new Swiper(".hotel-slider", {
