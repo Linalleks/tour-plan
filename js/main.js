@@ -4,20 +4,12 @@ $(document).ready(function () {
     $(".navbar-bottom").toggleClass("navbar-bottom--visible");
   });
 
-  let menuLink = document.querySelectorAll(".navbar-menu__link");
-  for (let i = 0; i < menuLink.length; i++) {
-    menuLink[i].addEventListener("click", function () {
-      if (
-        document
-          .querySelector(".navbar-bottom")
-          .classList.contains("navbar-bottom--visible")
-      ) {
-        document
-          .querySelector(".navbar-bottom")
-          .classList.remove("navbar-bottom--visible");
-      }
-    });
-  }
+  let menuLink = $(".navbar-menu__link");
+  menuLink.on("click", function () {
+    if ($(".navbar-bottom").hasClass("navbar-bottom--visible")) {
+      $(".navbar-bottom").removeClass("navbar-bottom--visible");
+    }
+  });
 
   var hotelSlider = new Swiper(".hotel-slider", {
     // Optional parameters
