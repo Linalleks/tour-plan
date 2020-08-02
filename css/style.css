@@ -2074,4 +2074,47 @@ template {
     width: 100%;
   }
 }
+
+@media (max-height: 520px) {
+  .modal__dialog {
+    padding: 25px 0;
+  }
+  .modal__form {
+    width: 85%;
+    margin: auto;
+  }
+  .modal__input:nth-child(2), .modal__input:nth-child(3) {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+}
+
+@media (max-height: 440px) {
+  .modal__dialog {
+    width: 92%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .modal__close {
+    right: 14px;
+    top: 14px;
+    width: 15px;
+    height: 15px;
+  }
+  .modal__form {
+    width: 95%;
+    margin: auto;
+  }
+  .modal__input {
+    margin-bottom: 12px;
+  }
+  .modal__input:nth-child(-n+3) {
+    -ms-flex-preferred-size: 32%;
+        flex-basis: 32%;
+  }
+  .modal__message {
+    margin-bottom: 12px;
+    height: 90px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

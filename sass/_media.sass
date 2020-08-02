@@ -395,6 +395,37 @@
       width: 85%
     &__button
       width: 100%
-
+@media ( max-height: 520px )
+  .modal
+    &__dialog
+      padding: 25px 0
+    &__form
+      width: 85%
+      margin: auto
+    &__input
+      &:nth-child(2),
+      &:nth-child(3)
+        flex-basis: 48%
+@media ( max-height: 440px )
+  .modal
+    &__dialog
+      width: 92%
+      padding-top: 10px
+      padding-bottom: 20px
+    &__close
+      right: 14px
+      top: 14px
+      width: 15px
+      height: 15px
+    &__form
+      width: 95%
+      margin: auto
+    &__input
+      margin-bottom: 12px
+      &:nth-child(-n+3)
+        flex-basis: 32%
+    &__message
+      margin-bottom: 12px
+      height: 90px
 
 
