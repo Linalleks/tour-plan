@@ -36,7 +36,7 @@ if (isset($_POST['phone'])) {
             $mail->isSMTP();
             $mail->CharSet = "UTF-8";
             $mail->SMTPAuth   = true;
-            $mail->SMTPDebug = 2;
+            //$mail->SMTPDebug = 2;
             $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
             // Настройки вашей почты
@@ -56,7 +56,10 @@ if (isset($_POST['phone'])) {
         $mail->Body = $body;
 
         // Проверяем отправленность сообщения
-        if ($mail->send()) {$result = "success";}
+        if ($mail->send()) {
+            $result = "success";
+            header('location: thankyou.html');
+        }
         else {$result = "error";}
 
         } catch (Exception $e) {
@@ -64,8 +67,7 @@ if (isset($_POST['phone'])) {
             $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
         }
 
-        // Отображение результата
-        header('location: thankyou.html');
+
     } else {
         echo $err; // собщаем об ошибке
     }
