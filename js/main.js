@@ -119,4 +119,6 @@ $(document).ready(function () {
 
   // Обработка маски телефона
   $(".input-phone").mask("+7 (999) 999-99-99", { autoclear: false });
+
+  AOS.init();
 });

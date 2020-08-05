@@ -5,19 +5,49 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 $formId = $_POST['form_id'];
-// Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
 
-// Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение</h2>
-<b>Имя:</b> $name<br>
-<b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+if ($formId == "footer_form" || $formId == "modal_feedback_form") {
+    // Переменные, которые отправляет пользователь
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+
+    // Формирование самого письма
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+} elseif ($formId == "modal_booking_form") {
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    // Формирование самого письма
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Email:</b> $email<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+} elseif ($formId == "subscribe_form") {
+    $email = $_POST['email'];
+
+    // Формирование самого письма
+    $title = "Новый запрос на подписку Best Tour Plan";
+    $body = "
+    <h2>Новый запрос на подписку</h2>
+    <b>Email:</b> $email<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+}
+
+
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();

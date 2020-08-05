@@ -9,13 +9,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a data-aos="zoom-out" href="#" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -284,11 +286,22 @@
       data-image-src="img/newsletter-bg.jpg"
     >
       <div class="newsletter-wrapper">
-        <h2 class="newsletter-title newsletter__title">
+        <h2
+          data-aos="fade-zoom-in"
+          data-aos-duration="1500"
+          class="newsletter-title newsletter__title"
+        >
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
+        <form
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          action="send.php"
+          method="POST"
+          class="subscribe newsletter__subscribe"
+        >
+          <input type="hidden" name="form_id" value="subscribe_form" />
           <input
             type="email"
             class="subscribe__input"
@@ -492,7 +505,11 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            class="card activities__card"
+          >
             <img
               src="img/activity-1.jpg"
               alt="The curious corner of chamarel"
@@ -502,7 +519,11 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1400"
+            class="card activities__card"
+          >
             <img
               src="img/activity-2.jpg"
               alt="Gymkhana club golf course"
@@ -512,7 +533,11 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1600"
+            class="card activities__card"
+          >
             <img
               src="img/activity-3.jpg"
               alt="Tamarind falls hiking trip - full day"
@@ -524,7 +549,11 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1800"
+            class="card activities__card"
+          >
             <img
               src="img/activity-4.jpg"
               alt="The blue marine discovery quest"
@@ -755,6 +784,7 @@
         </a>
         <h3 class="modal__title modal__title--mb-3">Booking</h3>
         <form action="send.php" method="POST" class="form modal__form">
+          <input type="hidden" name="form_id" value="modal_booking_form" />
           <div class="modal__input-wrapper">
             <div class="modal__input-group">
               <input
@@ -808,6 +838,7 @@
         </a>
         <h3 class="modal__title modal__title--mb-3">Send us a feedback</h3>
         <form action="send.php" method="POST" class="form modal__form">
+          <input type="hidden" name="form_id" value="modal_feedback_form" />
           <div class="modal__input-group">
             <input
               type="text"
@@ -844,6 +875,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
