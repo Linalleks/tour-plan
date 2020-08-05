@@ -354,7 +354,6 @@
       order: 1
     &__info
       flex-basis: 100%
-      margin-top: 15px
     &__close
       right: 18px
       top: 17px
@@ -395,7 +394,8 @@
     &__form
       width: 85%
     &__input
-      margin-top: 12px
+      &-group
+        margin-top: 12px
     &__message
       margin-top: 12px
     &__button
@@ -412,9 +412,10 @@
       width: 85%
       margin: auto
     &__input
-      &:nth-child(2),
-      &:nth-child(3)
-        flex-basis: 48%
+      &-group
+        &:nth-child(2),
+        &:nth-child(3)
+          flex-basis: 48%
 @media ( max-height: 440px )
   .modal
     &__dialog
@@ -430,9 +431,10 @@
       width: 95%
       margin: auto
     &__input
-      margin-top: 0
-      &:nth-child(-n+3)
-        flex-basis: 32%
+      &-group
+        margin-top: 0
+        &:nth-child(-n+3)
+          flex-basis: 32%
     &__message
       margin-top: 12px
       height: 90px
@@ -440,5 +442,13 @@
       margin-top: 12px
     &__info
       margin-top: 12px
-
+@media ( max-height: 360px )
+  .modal
+    &__dialog
+      padding-top: 5px
+      padding-bottom: 15px
+    &__input
+      height: 45px
+    &__message
+      height: 80px
 

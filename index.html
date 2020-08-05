@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/jquery.qtip.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -686,25 +687,28 @@
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
             <form action="send.php" method="POST" class="form footer__form">
-              <div class="footer__input-group">
-                <input
-                  type="text"
-                  class="input footer__input"
-                  placeholder="Your Full Name*"
-                  name="name"
-                  required
-                  minlength="2"
-                />
-              </div>
-              <div class="footer__input-group">
-                <input
-                  type="tel"
-                  class="input input-phone footer__input"
-                  placeholder="Phone Number*"
-                  name="phone"
-                  required
-                  minlength="18"
-                />
+              <input type="hidden" name="form_id" value="footer_form" />
+              <div class="footer__input-wrapper">
+                <div class="footer__input-group">
+                  <input
+                    type="text"
+                    class="input footer__input"
+                    placeholder="Your Full Name*"
+                    name="name"
+                    required
+                    minlength="2"
+                  />
+                </div>
+                <div class="footer__input-group">
+                  <input
+                    type="tel"
+                    class="input input-phone footer__input"
+                    placeholder="Phone Number*"
+                    name="phone"
+                    required
+                    minlength="18"
+                  />
+                </div>
               </div>
               <textarea
                 class="message footer__message"
@@ -752,29 +756,37 @@
         </a>
         <h3 class="modal__title modal__title--mb-3">Booking</h3>
         <form action="send.php" method="POST" class="form modal__form">
-          <input
-            type="text"
-            class="input modal__input"
-            placeholder="Your Full Name*"
-            name="name"
-            required
-            minlength="2"
-          />
-          <input
-            type="tel"
-            class="input input-phone modal__input"
-            placeholder="Phone Number*"
-            name="phone"
-            required
-            minlength="18"
-          />
-          <input
-            type="email"
-            class="input modal__input"
-            placeholder="Email*"
-            name="email"
-            required
-          />
+          <div class="modal__input-wrapper">
+            <div class="modal__input-group">
+              <input
+                type="text"
+                class="input modal__input"
+                placeholder="Your Full Name*"
+                name="name"
+                required
+                minlength="2"
+              />
+            </div>
+            <div class="modal__input-group">
+              <input
+                type="tel"
+                class="input input-phone modal__input"
+                placeholder="Phone Number*"
+                name="phone"
+                required
+                minlength="18"
+              />
+            </div>
+            <div class="modal__input-group">
+              <input
+                type="email"
+                class="input modal__input"
+                placeholder="Email*"
+                name="email"
+                required
+              />
+            </div>
+          </div>
           <textarea
             class="message modal__message"
             placeholder="Message"
@@ -797,21 +809,25 @@
         </a>
         <h3 class="modal__title modal__title--mb-3">Send us a feedback</h3>
         <form action="send.php" method="POST" class="form modal__form">
-          <input
-            type="text"
-            class="input modal__input"
-            placeholder="Your Full Name*"
-            name="name"
-            required
-          />
-          <input
-            type="tel"
-            class="input input-phone modal__input"
-            placeholder="Phone Number*"
-            name="phone"
-            required
-            minlength="18"
-          />
+          <div class="modal__input-group">
+            <input
+              type="text"
+              class="input modal__input"
+              placeholder="Your Full Name*"
+              name="name"
+              required
+            />
+          </div>
+          <div class="modal__input-group">
+            <input
+              type="tel"
+              class="input input-phone modal__input"
+              placeholder="Phone Number*"
+              name="phone"
+              required
+              minlength="18"
+            />
+          </div>
           <textarea
             class="message modal__message"
             placeholder="Message"
@@ -829,6 +845,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.qtip.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

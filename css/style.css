@@ -85,9 +85,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -99,6 +99,7 @@ img {
   color: #EC1F46;
   border-bottom: 1px solid #EC1F46;
   padding-top: 1px;
+  font-size: 12px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1390,6 +1391,21 @@ template {
   width: 100%;
 }
 
+.footer__input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
 .footer__input-group {
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
@@ -1478,10 +1494,29 @@ template {
 
 .modal__input {
   width: 100%;
+}
+
+.modal__input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.modal__input-group {
+  width: 100%;
   margin-top: 15px;
 }
 
-.modal__input:first-child {
+.modal__input-group:first-child {
   margin-top: 0;
 }
 
@@ -1500,6 +1535,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+  margin-top: 15px;
 }
 
 .close-icon {
@@ -2031,7 +2067,6 @@ template {
   .modal__info {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    margin-top: 15px;
   }
   .modal__close {
     right: 18px;
@@ -2086,7 +2121,7 @@ template {
   .modal__form {
     width: 85%;
   }
-  .modal__input {
+  .modal__input-group {
     margin-top: 12px;
   }
   .modal__message {
@@ -2109,7 +2144,7 @@ template {
     width: 85%;
     margin: auto;
   }
-  .modal__input:nth-child(2), .modal__input:nth-child(3) {
+  .modal__input-group:nth-child(2), .modal__input-group:nth-child(3) {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
   }
@@ -2131,10 +2166,10 @@ template {
     width: 95%;
     margin: auto;
   }
-  .modal__input {
+  .modal__input-group {
     margin-top: 0;
   }
-  .modal__input:nth-child(-n+3) {
+  .modal__input-group:nth-child(-n+3) {
     -ms-flex-preferred-size: 32%;
         flex-basis: 32%;
   }
@@ -2147,6 +2182,19 @@ template {
   }
   .modal__info {
     margin-top: 12px;
+  }
+}
+
+@media (max-height: 360px) {
+  .modal__dialog {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .modal__input {
+    height: 45px;
+  }
+  .modal__message {
+    height: 80px;
   }
 }
 /*# sourceMappingURL=style.css.map */
