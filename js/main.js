@@ -46,28 +46,6 @@ $(document).ready(function () {
     },
   });
 
-  ymaps.ready(init);
-  function init() {
-    var myMap = new ymaps.Map("map", {
-      center: [7.890461, 98.294484],
-      zoom: 17,
-    });
-
-    myMap.behaviors.disable("scrollZoom");
-
-    myPlacemark = new ymaps.Placemark(
-      [7.890808, 98.294949],
-      {
-        iconCaption: "Hilton hotel",
-      },
-      {
-        preset: "islands#greenDotIconWithCaption",
-      }
-    );
-
-    myMap.geoObjects.add(myPlacemark);
-  }
-
   var modalButton = $('[data-toggle="modal"]');
   var closeModalButton = $(".modal__close");
   var modalOverlay = $(".modal__overlay");
