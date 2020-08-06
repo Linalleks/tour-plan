@@ -181,29 +181,29 @@
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="hotel-slider__image"
-                  src="img/slide-2.jpg"
+                  class="hotel-slider__image lazy"
+                  data-src="img/slide-2.jpg"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="hotel-slider__image"
-                  src="img/slide-3.jpg"
+                  class="hotel-slider__image lazy"
+                  data-src="img/slide-3.jpg"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="hotel-slider__image"
-                  src="img/slide-4.jpg"
+                  class="hotel-slider__image lazy"
+                  data-src="img/slide-4.jpg"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="hotel-slider__image"
-                  src="img/slide-5.jpg"
+                  class="hotel-slider__image lazy"
+                  data-src="img/slide-5.jpg"
                   alt="slide"
                 />
               </div>
@@ -264,11 +264,10 @@
             </div>
             <!-- /.booking -->
 
-            <div id="map" class="map">
+            <div class="map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.041275564851!2d98.29254741409927!3d7.8907508079492485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1595327512714!5m2!1sru!2sru"
-                class="map__frame"
-                style="border: 0;"
+                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.041275564851!2d98.29254741409927!3d7.8907508079492485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1595327512714!5m2!1sru!2sru"
+                class="map-frame lazy"
                 allowfullscreen=""
                 aria-hidden="false"
                 tabindex="0"
@@ -363,9 +362,9 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-2.jpg"
+                    data-src="img/reviews-avatar-2.jpg"
                     alt="Photo: Julia Vans"
-                    class="reviews-slider__avatar"
+                    class="reviews-slider__avatar lazy"
                   />
                   <h3 class="reviews-slider__username">Julia Vans</h3>
                   <span class="reviews-slider__date">Stayed 23 Jun, 2019</span>
@@ -400,9 +399,9 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-3.jpg"
+                    data-src="img/reviews-avatar-3.jpg"
                     alt="Photo: Andrew Stans"
-                    class="reviews-slider__avatar"
+                    class="reviews-slider__avatar lazy"
                   />
                   <h3 class="reviews-slider__username">Andrew Stans</h3>
                   <span class="reviews-slider__date">Stayed 4 Jan, 2017</span>
@@ -428,9 +427,9 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-4.jpg"
+                    data-src="img/reviews-avatar-4.jpg"
                     alt="Photo: Егор Петров"
-                    class="reviews-slider__avatar"
+                    class="reviews-slider__avatar lazy"
                   />
                   <h3 class="reviews-slider__username">Егор Петров</h3>
                   <span class="reviews-slider__date">Stayed 25 Sep, 2018</span>
@@ -468,9 +467,9 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-5.jpg"
+                    data-src="img/reviews-avatar-5.jpg"
                     alt="Photo: Алина Исправникова"
-                    class="reviews-slider__avatar"
+                    class="reviews-slider__avatar lazy"
                   />
                   <h3 class="reviews-slider__username">Алина Исправникова</h3>
                   <span class="reviews-slider__date">Stayed 12 Apr, 2018</span>
@@ -515,9 +514,9 @@
             class="card activities__card"
           >
             <img
-              src="img/activity-1.jpg"
+              data-src="img/activity-1.jpg"
               alt="The curious corner of chamarel"
-              class="card__image"
+              class="card__image lazy"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
             <button class="card__button">Book Now</button>
@@ -529,9 +528,9 @@
             class="card activities__card"
           >
             <img
-              src="img/activity-2.jpg"
+              data-src="img/activity-2.jpg"
               alt="Gymkhana club golf course"
-              class="card__image"
+              class="card__image lazy"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="card__button">Book Now</button>
@@ -543,9 +542,9 @@
             class="card activities__card"
           >
             <img
-              src="img/activity-3.jpg"
+              data-src="img/activity-3.jpg"
               alt="Tamarind falls hiking trip - full day"
-              class="card__image"
+              class="card__image lazy"
             />
             <h3 class="card__title">
               Tamarind falls hiking trip&nbsp;-&nbsp;full day
@@ -559,9 +558,9 @@
             class="card activities__card"
           >
             <img
-              src="img/activity-4.jpg"
+              data-src="img/activity-4.jpg"
               alt="The blue marine discovery quest"
-              class="card__image"
+              class="card__image lazy"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
             <button class="card__button">Book Now</button>
@@ -577,9 +576,9 @@
       <div class="container">
         <div class="footer-wrapper">
           <img
-            src="img/vertical-logo.svg"
+            data-src="img/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
+            class="logo footer__logo lazy"
           />
           <div class="footer__list footer__categories">
             <h3 class="footer__title">All categories</h3>
@@ -773,9 +772,9 @@
               >
             </div>
             <img
-              src="img/payment-icons.png"
+              data-src="img/payment-icons.png"
               alt="Icons: payment methods"
-              class="payment footer__payment"
+              class="payment footer__payment lazy"
             />
           </div>
           <!-- /.footer__bottom -->
@@ -791,7 +790,7 @@
       <!-- /.modal__overlay -->
       <div class="modal__dialog">
         <a href="#" class="modal__close">
-          <img class="close-icon" src="img/close.svg" alt="" />
+          <img class="close-icon lazy" data-src="img/close.svg" alt="" />
         </a>
         <h3 class="modal__title modal__title--mb-3">Booking</h3>
         <form action="send.php" method="POST" class="form modal__form">
@@ -845,7 +844,7 @@
       <!-- /.modal__overlay -->
       <div class="modal__dialog">
         <a href="#" class="modal__close">
-          <img class="close-icon" src="img/close.svg" alt="" />
+          <img class="close-icon lazy" data-src="img/close.svg" alt="" />
         </a>
         <h3 class="modal__title modal__title--mb-3">Send us a feedback</h3>
         <form action="send.php" method="POST" class="form modal__form">
@@ -887,6 +886,7 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/aos.js"></script>
+    <script src="js/lazyload.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
