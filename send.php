@@ -7,6 +7,7 @@ require 'phpmailer/Exception.php';
 $formId = $_POST['form_id'];
 
 if ($formId == "footer_form") {
+    $mesageId = 1;
     // Переменные, которые отправляет пользователь
     $name = $_POST['name'];
     $phone = $_POST['phone'];
@@ -21,6 +22,7 @@ if ($formId == "footer_form") {
     <b>Сообщение:</b><br>$message
     ";
 } elseif ($formId == "modal_form") {
+    $mesageId = 1;
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
@@ -31,11 +33,12 @@ if ($formId == "footer_form") {
     $body = "
     <h2>Новое обращение</h2>
     <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
+    <b>Телефон:</b> $phone<br>
     <b>Email:</b> $email<br><br>
     <b>Сообщение:</b><br>$message
     ";
 } elseif ($formId == "subscribe_form") {
+    $mesageId = 2;
     $email = $_POST['email'];
 
     // Формирование самого письма
@@ -46,9 +49,6 @@ if ($formId == "footer_form") {
     <b>Сообщение:</b><br>$message
     ";
 }
-
-
-
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
@@ -77,7 +77,7 @@ $mail->Body = $body;
 // Проверяем отправленность сообщения
 if ($mail->send()) {
     $result = "success";
-    header('location: thankyou.html');
+    header('location: thankyou.php');
 }
 else {$result = "error";}
 

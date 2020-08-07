@@ -137,11 +137,19 @@
         <div class="hotel-info">
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
-              <h1 class="hotel-name hotel-info__name">Message sent!</h1>
-            </div>
-            <p class="hotel-description hotel-info__description">
-              Our manager will call you in 5 minutes.
-            </p>
+              <?php
+                require 'send.php';
+                if ($mesageId == 1) {
+                  echo '<h1 class="hotel-name hotel-info__name">Message sent!</h1>
+                </div>
+                <p class="hotel-description hotel-info__description">
+                  Our manager will call you in 5 minutes.
+                </p>';
+                } else {
+                  echo '<h1 class="hotel-name hotel-info__name">Thank You for subscribe!</h1>
+                </div>';
+                }
+              ?>
           </div>
           <!-- /.hotel-info__text -->
         </div>
