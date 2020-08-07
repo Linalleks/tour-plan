@@ -172,8 +172,9 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="hotel-slider__image"
-                  src="img/slide-1.jpg"
+                  class="hotel-slider__image lazy"
+                  data-src="img/slide-1.jpg"
+                  src="#"
                   alt="slide"
                 />
               </div>
@@ -711,12 +712,12 @@
                 </div>
                 <span>
                   Tel (business hours) :
-                  <span class="phone-number">269 1500</span><br />
+                  <a href="tel:2691500" class="phone-number">269 1500</a><br />
                   Tel (hotline) Monday - Saturday:
-                  <span class="phone-number">52-56-61-38</span>
+                  <a href="tel:52566138" class="phone-number">52-56-61-38</a>
                   <span class="work-time">(08:00 am - 20:00 pm)</span><br />
                   Tel (hotline) Sunday:
-                  <span class="phone-number">52-56-61-38</span>
+                  <a href="tel:52566138" class="phone-number">52-56-61-38</a>
                   <span class="work-time">(08:00 am - 14:00 pm)</span>
                 </span>
               </li>
@@ -728,7 +729,9 @@
                     alt="icon: email"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a class="email" href="mailto:cherly.lawson@example.com"
+                  >cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
