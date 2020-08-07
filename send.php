@@ -6,7 +6,7 @@ require 'phpmailer/Exception.php';
 
 $formId = $_POST['form_id'];
 
-if ($formId == "footer_form" || $formId == "modal_feedback_form") {
+if ($formId == "footer_form") {
     // Переменные, которые отправляет пользователь
     $name = $_POST['name'];
     $phone = $_POST['phone'];
@@ -20,7 +20,7 @@ if ($formId == "footer_form" || $formId == "modal_feedback_form") {
     <b>Телефон:</b> $phone<br><br>
     <b>Сообщение:</b><br>$message
     ";
-} elseif ($formId == "modal_booking_form") {
+} elseif ($formId == "modal_form") {
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
