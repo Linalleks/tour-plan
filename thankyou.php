@@ -138,14 +138,14 @@
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
               <?php
-                require 'send.php';
+                $mesageId = $_GET['mesageId'];
                 if ($mesageId == 1) {
                   echo '<h1 class="hotel-name hotel-info__name">Message sent!</h1>
                 </div>
                 <p class="hotel-description hotel-info__description">
                   Our manager will call you in 5 minutes.
                 </p>';
-                } else {
+                } elseif ($mesageId == 2) {
                   echo '<h1 class="hotel-name hotel-info__name">Thank You for subscribe!</h1>
                 </div>';
                 }

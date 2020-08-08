@@ -49,6 +49,7 @@ if ($formId == "footer_form") {
     <b>Сообщение:</b><br>$message
     ";
 }
+
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
@@ -77,7 +78,7 @@ $mail->Body = $body;
 // Проверяем отправленность сообщения
 if ($mail->send()) {
     $result = "success";
-    header('location: thankyou.php');
+    header('location: thankyou.php?mesageId='.$mesageId);
 }
 else {$result = "error";}
 
