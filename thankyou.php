@@ -145,11 +145,14 @@
                 <p class="hotel-description hotel-info__description">
                   Our manager will call you in 5 minutes.
                 </p>';
-                } elseif ($mesageId == 2) {
+                } else {
                   echo '<h1 class="hotel-name hotel-info__name">Thank You for subscribe!</h1>
                 </div>';
                 }
               ?>
+              <a href="index.html" class="button button-home">
+                <  At Homepage
+              </a>
           </div>
           <!-- /.hotel-info__text -->
         </div>
